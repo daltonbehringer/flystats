@@ -19,7 +19,7 @@ class _reader(object):
         data = pd.read_csv(filename)
         
         self.site = data.station
-        self.date = data.valid
+        self.date = pd.to_datetime(data.valid)
         self.metar = data.metar
 
         self._prep_data()
