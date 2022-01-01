@@ -18,7 +18,6 @@ class _reader(object):
 
         data = pd.read_csv(filename)
         
-        # t = pd.Series([val.time() for val in pd.to_datetime(data.Time)])
         self.site = data.station
         self.date = pd.to_datetime(data.valid)
         self.metar = data.metar
